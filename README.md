@@ -1,23 +1,50 @@
-## Licence
+# Arctic Research Station Management System
 
-MIT License
+A C++ resource management system for a simulated Arctic research station, built as part of the **INFO1102 - Principles of Programming II** course.
 
-Copyright (c) 2026 Jovial Elyas Bearivo
+## 📋 Project Overview
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This program manages critical resources (food, fuel, oxygen, etc.) at an isolated Arctic research station. It tracks inventory, logs all operations, and ensures robust error handling — because in the Arctic, a software crash could be fatal!
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## ⚙️ Features
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- **Load Data** – Reads resources from `database1.txt` into a structured array at startup
+- **Display Resources** – Shows the current state of all resources (name, quantity, type, spec)
+- **Consume a Resource** – Updates stock after consumption, with error handling for insufficient quantities
+- **Sort by Quantity** – Sorts resources in ascending order using a Bubble Sort algorithm
+- **Operation Logging** – Every action is saved to `journal_bord.txt` using `ios::app`
+
+## 🗂️ Project Structure
+```
+├── bearivo_jovial.cpp     # Main source file
+├── database1.txt          # Input data file (resources)
+└── journal_bord.txt       # Auto-generated operation log
+```
+
+## 🧠 Key Concepts Used
+
+- **Enum** – `TypeRessource` (VITAL, TECHNIQUE, CONSOMMABLE)
+- **Union** – `SpecInfo` stores either a pressure (`int`) or temperature (`double`)
+- **Struct** – `RessourceJB` combines all resource attributes
+- **Pointers** – Functions use pointers to directly modify data in memory (no copy overhead)
+- **File I/O** – `ifstream` for reading, `ofstream` with `ios::app` for logging
+- **Exception Handling** – `try/catch` blocks for file errors, invalid input, and stock overflow
+
+## 🔢 Sorting Algorithm
+
+Implements **Bubble Sort** — O(n²) time complexity. Simple and sufficient for a small fixed array of 5 resources.
+
+## 🚀 How to Run
+```bash
+# Compile
+g++ bearivo_jovial.cpp -o station
+
+# Run
+./station
+```
+
+Make sure `database1.txt` is in the same directory as the executable.
+
+## 📄 License
+
+MIT License — Copyright (c) 2026 Jovial Elyas Bearivo
