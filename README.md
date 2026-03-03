@@ -37,7 +37,7 @@ Implements **Bubble Sort** — O(n²) time complexity. Simple and sufficient for
 ## 🚀 How to Run
 ```bash
 # Compile
-g++ bearivo_jovial.cpp -o station
+g++ bearivo_jovial_Elyas.cpp -o station
 
 # Run
 ./station
