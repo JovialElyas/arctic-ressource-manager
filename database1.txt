@@ -1,0 +1,5 @@
+Oxygene 85 0 1013
+Fuel 1200 1 -25.5
+Rations 45 2 0
+Batteries 30 1 -10.2
+Medicaments 15 0 1010
