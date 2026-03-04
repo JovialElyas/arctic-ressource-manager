@@ -16,7 +16,7 @@ This program manages critical resources (food, fuel, oxygen, etc.) at an isolate
 
 ## 🗂️ Project Structure
 ```
-├── bearivo_jovial.cpp     # Main source file
+├── BEARIVO_Jovial_Elyas.cpp     # Main source file
 ├── database1.txt          # Input data file (resources)
 └── journal_bord.txt       # Auto-generated operation log
 ```
@@ -37,7 +37,7 @@ Implements **Bubble Sort** — O(n²) time complexity. Simple and sufficient for
 ## 🚀 How to Run
 ```bash
 # Compile
-g++ bearivo_jovial.cpp -o station
+g++ BEARIVO_Jovial_Elyas.cpp -o station
 
 # Run
 ./station
