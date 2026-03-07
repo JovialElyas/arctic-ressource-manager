@@ -80,7 +80,7 @@ void displayResources(ResourceJB* array, int size){
     recordLog("Resources displayed."); //record the action in our log
 }
 
-//function that uses bubble sort to sort resources — O(n^2) complexity
+//function that uses bubble sort to sort resources â€” O(n^2) complexity
 void sortResources(ResourceJB* array, int size){
     for(int i = 0; i < size - 1; i++){ //outer loop for the number of passes
         for(int j = 0; j < size - i - 1; j++){ //compare adjacent elements
@@ -166,5 +166,5 @@ int main(){
         }
     }while(choice != 4); //the loop continues as long as the user does not choose 4
 
-    return 0; //end of program, thanks for reading my code!
+    return 0; //end of program, thanks for reading my code! thnak you so much 
 }
