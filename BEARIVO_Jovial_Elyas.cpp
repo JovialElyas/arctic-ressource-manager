@@ -1,3 +1,41 @@
+/*
+ * ============================================================
+ *  Arctic Research Station Management System
+ *  INFO1102 — Principles of Programming II
+ *  Author : Jovial Elyas Bearivo
+ * ============================================================
+ *
+ *  NOTE: A video walkthrough of this project is available at:
+ *  https://youtu.be/cPW7VWs17TM?si=CSdxppgfbEro8_tW
+ *
+ *  ⚠️  The video is in FRENCH, as this project was submitted
+ *  in a francophone academic context (Université de Moncton, NB).
+ *  The explanation covers the following design decisions:
+ *
+ *  1. BUBBLE SORT
+ *     Chosen for its simplicity and readability over a fixed-size
+ *     array of 5 resources. O(n²) is perfectly acceptable at this
+ *     scale, and it demonstrates loop-based sorting logic clearly.
+ *
+ *  2. ENUM (TypeRessource)
+ *     Used to categorize resources as VITAL, TECHNIQUE, or
+ *     CONSOMMABLE. Enums improve code readability and prevent
+ *     the use of arbitrary integer "magic numbers".
+ *
+ *  3. STRUCT & UNION (RessourceJB / SpecInfo)
+ *     A struct groups all attributes of a resource into a single
+ *     logical unit. The union (SpecInfo) stores either a pressure
+ *     (int) or a temperature (double) — never both — saving memory
+ *     when only one spec applies depending on the resource type.
+ *
+ *  4. FILE MANIPULATION
+ *     ifstream reads the initial resource data from database1.txt.
+ *     ofstream with ios::app appends every operation to
+ *     journal_bord.txt, creating a persistent operation log
+ *     that survives across program runs.
+ *
+ * ============================================================
+ */
 #include <iostream>
 #include <fstream> //library for file manipulation
 using namespace std;
