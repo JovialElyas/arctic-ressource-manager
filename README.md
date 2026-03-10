@@ -2,11 +2,11 @@
 
 A C++ resource management system for a simulated Arctic research station, built as part of the **INFO1102 - Principles of Programming II** course.
 
-## 📋 Project Overview
+## Project Overview
 
 This program manages critical resources (food, fuel, oxygen, etc.) at an isolated Arctic research station. It tracks inventory, logs all operations, and ensures robust error handling — because in the Arctic, a software crash could be fatal!
 
-## ⚙️ Features
+## Features
 
 - **Load Data** – Reads resources from `database1.txt` into a structured array at startup
 - **Display Resources** – Shows the current state of all resources (name, quantity, type, spec)
@@ -14,14 +14,14 @@ This program manages critical resources (food, fuel, oxygen, etc.) at an isolate
 - **Sort by Quantity** – Sorts resources in ascending order using a Bubble Sort algorithm
 - **Operation Logging** – Every action is saved to `journal_bord.txt` using `ios::app`
 
-## 🗂️ Project Structure
+## Project Structure
 ```
 ├── BEARIVO_Jovial_Elyas.cpp     # Main source file
 ├── database1.txt          # Input data file (resources)
 └── journal_bord.txt       # Auto-generated operation log
 ```
 
-## 🧠 Key Concepts Used
+## Key Concepts Used
 
 - **Enum** – `TypeRessource` (VITAL, TECHNIQUE, CONSOMMABLE)
 - **Union** – `SpecInfo` stores either a pressure (`int`) or temperature (`double`)
@@ -30,11 +30,11 @@ This program manages critical resources (food, fuel, oxygen, etc.) at an isolate
 - **File I/O** – `ifstream` for reading, `ofstream` with `ios::app` for logging
 - **Exception Handling** – `try/catch` blocks for file errors, invalid input, and stock overflow
 
-## 🔢 Sorting Algorithm
+## Sorting Algorithm
 
 Implements **Bubble Sort** — O(n²) time complexity. Simple and sufficient for a small fixed array of 5 resources.
 
-## 🚀 How to Run
+## How to Run
 ```bash
 # Compile
 g++ BEARIVO_Jovial_Elyas.cpp -o station
@@ -45,6 +45,6 @@ g++ BEARIVO_Jovial_Elyas.cpp -o station
 
 Make sure `database1.txt` is in the same directory as the executable.
 
-## 📄 License
+## License
 
 MIT License — Copyright (c) 2026 Jovial Elyas Bearivo
