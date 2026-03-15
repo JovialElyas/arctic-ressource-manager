@@ -8,7 +8,7 @@
  *  NOTE: A video walkthrough of this project is available at:
  *  https://youtu.be/cPW7VWs17TM?si=CSdxppgfbEro8_tW
  *
- *  ⚠️  The video is in FRENCH, as this project was submitted
+ *  The video is in FRENCH, as this project was submitted
  *  in a francophone academic context (Université de Moncton, NB).
  *  The explanation covers the following design decisions:
  *
