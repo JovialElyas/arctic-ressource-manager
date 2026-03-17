@@ -33,7 +33,7 @@
  *     ofstream with ios::app appends every operation to
  *     journal_bord.txt, creating a persistent operation log
  *     that survives across program runs.
- *
+ *     commit 
  * ============================================================
  */
 #include <iostream>
